@@ -81,7 +81,7 @@ runs 3 suites covering about 84,000 replayed cases in a few seconds.
 | instance defaults differ from static defaults (`lambertw`, `layeradd`, `slog`, `penta_log`) | overloads reproduce both, but a few static convenience forms (`Decimal.slog(x)`, `Decimal.iteratedlog(x)`, `Decimal.penta_log(x)`) are omitted because Java cannot overload on static-ness; call `x.slog()` instead |
 | `valueOf()`/`toJSON()` return strings | same (String-returning methods), but Java has no operator coercion — use `toString()` |
 | `isNaN` (static) vs `isNan` (instance) | kept exactly as-is |
-| arrays of `[Decimal, 0|1|2]` | `Decimal.ExcessSlogResult` record (package-private, internal) |
+| arrays of `[Decimal, 0\|1\|2]` | `Decimal.ExcessSlogResult` record (package-private, internal) |
 | functions as arguments (`increasingInverse`) | `java.util.function.Function<Decimal, Decimal>` |
 
 `Decimal.dZero`, `dOne`, `dNaN`, `dInf`, `dLayerMax` and the other 9 constants exist with
